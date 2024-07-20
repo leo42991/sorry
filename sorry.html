@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey pretty lady!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>I'm really sorry for what i did, i shouldn't have over-reacted
+</h1>
+    <label for="options">Baby do you forgive me?</label>
+    <select id="options" onchange="showContent()">
+        <option value="">Select...</option>
+        <option value="1">Yes :)</option>
+        <option value="2">No :(</option>
+    </select>
+
+    <div id="content">
+        <!-- Content will be displayed here -->
+    </div>
+
+    <script>
+        function showContent() {
+            var contentDiv = document.getElementById('content');
+            var selectedValue = document.getElementById('options').value;
+            
+            switch(selectedValue) {
+                case '1':
+                    contentDiv.innerHTML = '<p>Thank you!!! I love you so much <3 </p><a href="https://www.youtube.com/watch?v=KN3IemyqJJw" target="_blank">Click me!</a>';
+                    break;
+                case '2':
+                    contentDiv.innerHTML = '<p> What can I do to make up to you? A date tomorrow? </p><a href="https://www.youtube.com/watch?v=4ttoq1nqxUE" target="_blank">This what I wanna say</a>';
+                    break;
+               
+                default:
+                    contentDiv.innerHTML = '';
+            }
+        }
+    </script>
+
+</body>
+</html>
